@@ -4,6 +4,7 @@
   imports = [
     ./programs
     ./fcitx5
+    ./xgd.nix
   ];
 
   home = {

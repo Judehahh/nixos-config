@@ -124,11 +124,12 @@
   environment.systemPackages = with pkgs; [
     git
     vim 
+    neovim
     wget
     curl
   ];
 
-  environment.variables.EDITOR = "kate";
+  environment.variables.EDITOR = "neovim";
 
   # Some programs need SUID wrappers, can be configured further or are
   # started in user sessions.

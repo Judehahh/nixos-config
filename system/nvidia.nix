@@ -38,4 +38,12 @@
     # Optionally, you may need to select the appropriate driver version for your specific GPU.
     package = config.boot.kernelPackages.nvidiaPackages.beta;
   };
+
+  # For optimus on notebook
+  hardware.nvidia.prime = {
+    sync.enable = true;
+
+    intelBusId = "PCI:0:2:0";
+    nvidiaBusId = "PCI:1:0:0";
+  };
 }

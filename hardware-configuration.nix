@@ -8,7 +8,7 @@
     [ (modulesPath + "/installer/scan/not-detected.nix")
     ];
 
-  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usb_storage" "usbhid" "sd_mod" "rtsx_usb_sdmmc" ];
+  boot.initrd.availableKernelModules = [ "xhci_pci" "ahci" "nvme" "usbhid" "sd_mod" "rtsx_usb_sdmmc" ];
   boot.initrd.kernelModules = [ ];
   boot.kernelModules = [ "kvm-intel" ];
   boot.extraModulePackages = [ ];
@@ -21,6 +21,11 @@
   fileSystems."/boot" =
     { device = "/dev/disk/by-uuid/2A88-7FF0";
       fsType = "vfat";
+    };
+
+  fileSystems."/home/jude/Data" =
+    { device = "/dev/disk/by-uuid/089263c7-debc-4930-ba7a-d517a08b8f13";
+      fsType = "ext4";
     };
 
   swapDevices =
